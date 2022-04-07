@@ -5,6 +5,7 @@ import backend.bookstack.dto.ReviewDTO;
 import backend.bookstack.model.ReviewEntity;
 import backend.bookstack.service.ReviewService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -53,6 +54,23 @@ public class ReviewController {
             List<ReviewEntity> searchedReview = service.readOne(entity);
             List<ReviewDTO> dto = searchedReview.stream().map(ReviewDTO::new).collect(Collectors.toList());
             ResponseDTO response = ResponseDTO.builder().data(dto).build();
+
+            return ResponseEntity.ok().body(response);
+
+        } catch (Exception e) {
+            ResponseDTO response = ResponseDTO.builder().error(e.getMessage()).build();
+
+            return ResponseEntity.badRequest().body(response);
+        }
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<?> readAllReview() {
+
+        try {
+            List<ReviewEntity> reviews = service.readAll("user1");
+            List<ReviewDTO> dtos = reviews.stream().map(ReviewDTO::new).collect(Collectors.toList());
+            ResponseDTO response = ResponseDTO.builder().data(dtos).build();
 
             return ResponseEntity.ok().body(response);
 

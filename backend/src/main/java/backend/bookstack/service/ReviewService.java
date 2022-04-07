@@ -31,4 +31,9 @@ public class ReviewService {
 
         return repository.findByUserIdAndBookId(userId, bookId);
     }
+
+    public List<ReviewEntity> readAll(final String userId) {
+
+        return repository.findByUserIdOrderByCreatedAtDesc(userId);
+    }
 }
