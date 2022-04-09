@@ -1,23 +1,24 @@
 <template>
   <div id="app">
+    <header-bar></header-bar>
+    <footer-bar></footer-bar>
   </div>
 </template>
 
 <script>
+import HeaderBar from './components/layout/HeaderBar.vue'
+import FooterBar from './components/layout/FooterBar.vue'
 
 export default {
   components: {
+    HeaderBar,
+    FooterBar
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  margin: 0;
 }
 </style>
