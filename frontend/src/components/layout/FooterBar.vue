@@ -43,10 +43,10 @@
 
         <div class="col-md-4 col-sm-6 col-xs-12">
           <ul class="social-icons">
-            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            <li><a class="github" href="https://github.com/anrunda9/book-stack"><i class="fa-brands fa-github"></i></a></li>
+            <li><a class="blog" href="https://velog.io/@anrun"><i class="fa-solid fa-b"></i></a></li>
+            <li><a class="youtube" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a class="mail" href="mailto:jayylee.dev@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>   
           </ul>
         </div>
       </div>
@@ -63,15 +63,15 @@ export default {
 <style scoped>
 .site-footer
 {
-  background-color:#26272b;
+  background-color:#42b883;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
-  color:#737373;
+  color:#eceeef;
 }
 .site-footer hr
 {
-  border-top-color:#bbb;
+  border-top-color:#eceeef;
   opacity:0.5
 }
 .site-footer hr.small
@@ -88,7 +88,7 @@ export default {
 }
 .site-footer a
 {
-  color:#737373;
+  color:#eceeef;
 }
 .site-footer a:hover
 {
@@ -106,7 +106,7 @@ export default {
 }
 .footer-links a
 {
-  color:#737373
+  color:#eceeef
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
@@ -129,7 +129,7 @@ export default {
   margin-left:6px;
   margin-right:0;
   border-radius:100%;
-  background-color:#33353d
+  background-color:#328b63
 }
 .copyright-text
 {
@@ -174,7 +174,7 @@ export default {
 }
 .social-icons a{
   background-color:#eceeef;
-  color:#818a91;
+  color:#eceeef;
   font-size:16px;
   display:inline-block;
   line-height:44px;
@@ -199,21 +199,9 @@ export default {
   width:34px;
   font-size:14px
 }
-.social-icons a.facebook:hover
+.social-icons a:hover
 {
-  background-color:#3b5998
-}
-.social-icons a.twitter:hover
-{
-  background-color:#00aced
-}
-.social-icons a.linkedin:hover
-{
-  background-color:#007bb6
-}
-.social-icons a.dribbble:hover
-{
-  background-color:#ea4c89
+  background-color:#06db8a
 }
 @media (max-width:767px)
 {
