@@ -1,5 +1,5 @@
 <template>
-  <form class="row domain-search">
+  <div class="row domain-search">
     <div class="search-container">
       <div class="row">
         <div class="col-md-3">
@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-  </form>
+  </div>
 </template>
 
 <script>
