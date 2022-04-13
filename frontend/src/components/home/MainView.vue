@@ -10,16 +10,26 @@
           <search-form></search-form>
         </div>
       </div>
+      <hr>
+      <div class="result-container row m-1 p-3 px-5">
+        <div class="container profile-page">
+          <div class="row">
+            <!-- <book-card></book-card> -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import SearchForm from './SearchForm.vue'
+// import BookCard from '../layout/BookCard.vue'
 
 export default {
   components: {
-    SearchForm
+    SearchForm,
+    // BookCard  
   }
 }
 </script>
