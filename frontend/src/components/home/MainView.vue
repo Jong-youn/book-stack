@@ -10,11 +10,14 @@
           <search-form></search-form>
         </div>
       </div>
-      <hr>
-      <div class="result-container row m-1 p-3 px-5">
-        <div class="container profile-page">
-          <div class="row">
-            <!-- <book-card></book-card> -->
+      <div v-if="searchLoaded" class="search-result">
+        <hr>
+        <p>검색 결과 {{ searchCount }}개</p>
+        <div class="result-container row m-1 p-3 px-5">
+          <div class="container profile-page">
+            <div class="row">
+              <book-card></book-card>
+            </div>
           </div>
         </div>
       </div>
@@ -23,13 +26,20 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import SearchForm from './SearchForm.vue'
-// import BookCard from '../layout/BookCard.vue'
+import BookCard from '../layout/BookCard.vue'
 
 export default {
+  computed: {
+    ...mapState({
+      searchCount: state => state.searchedBook.display,
+      searchLoaded: state => state.searchLoaded
+    })
+  },
   components: {
     SearchForm,
-    // BookCard  
+    BookCard  
   }
 }
 </script>
@@ -57,4 +67,12 @@ export default {
     display: block
 }
 
+.search-result hr {
+    margin-top: 5%;
+}
+
+.search-result p {
+    color: black;
+    font-weight: 400;
+}
 </style>
