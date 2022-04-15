@@ -16,7 +16,7 @@
         <div class="result-container row m-1 p-3 px-5">
           <div class="container profile-page">
             <div class="row">
-              <book-card></book-card>
+              <book-card v-for="book in books" v-bind:key=book.isbn v-bind:book='book'></book-card>
             </div>
           </div>
         </div>
@@ -34,7 +34,8 @@ export default {
   computed: {
     ...mapState({
       searchCount: state => state.searchedBook.display,
-      searchLoaded: state => state.searchLoaded
+      searchLoaded: state => state.searchLoaded,
+      books: state => state.searchedBook.items
     })
   },
   components: {
