@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router';
 
-import MainView from '../components/MainView.vue';
+import MainView from '../components/home/MainView.vue';
 import SignUpView from '../components/SignUpView.vue';
 import LoginView from '../components/LoginView.vue';
 import ReviewView from '../components/ReviewView.vue';
